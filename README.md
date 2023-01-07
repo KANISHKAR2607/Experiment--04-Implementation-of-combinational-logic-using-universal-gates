@@ -60,36 +60,50 @@ assign f=(~(~p & ~q & ~r));
 endmodule
 
 using NOR:
-![image](https://user-images.githubusercontent.com/118886772/211155652-0ec701c5-8d47-4cc9-835e-8388c4e99702.png)
-
-
 module combo2(a,b,c,d,f);
-
 input a,b,c,d;
-
 output f;
-
 wire p,q,r;
-
 assign p=( c & ~b & a);
-
 assign q=( d & ~c & a);
-
 assign r=( c & ~b & a);
-
 assign f=((( p | q | r)));
-
 endmodule
+
 ## RTL realization
 
 ## Output:
+
 ## RTL
-![image](https://user-images.githubusercontent.com/118886772/211155667-e6698786-24ff-4c2f-b94b-178743ea8e52.png)
+
+using NAND:
+
+![exp 4 rtl nand](https://user-images.githubusercontent.com/118886772/211156473-a9cc42a0-6b11-4256-94bd-7ca0533108a8.png)
+
+using NOR:
+
+![rtl exp 4 nor](https://user-images.githubusercontent.com/118886772/211156445-850c4f94-adf3-4f62-a605-f2172330fdd1.png)
 
 ## Timing Diagram
-![image](https://user-images.githubusercontent.com/118886772/211155696-3635fcb5-43ff-44d5-afc5-8ca4d270f9ce.png)
 
-![image](https://user-images.githubusercontent.com/118886772/211155678-d9ab2ffa-10b8-41ab-a2af-59a3a0022a17.png)
+using NAND:
+
+![time exp 4 nand](https://user-images.githubusercontent.com/118886772/211156458-d9c0dc06-11f4-4cdf-b18b-d85ded771917.png)
+
+using NOR:
+
+![time exp 4 nor](https://user-images.githubusercontent.com/118886772/211156453-946b1066-11fe-470c-ac72-a5be2f91597e.png)
+
+##Truth Table
+
+using NAND
+
+![truth exp 4 nand](https://user-images.githubusercontent.com/118886772/211156514-f96704ec-0c95-466f-902e-9a306a45a718.png)
+
+using NOR
+
+![truth exp 4 nor](https://user-images.githubusercontent.com/118886772/211156522-0e181bff-572f-4956-b744-000d5d40380d.png)
 
 ## Result:
+
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
