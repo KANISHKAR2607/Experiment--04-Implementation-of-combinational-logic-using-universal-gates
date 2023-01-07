@@ -28,16 +28,68 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Logic Diagram
 ## Procedure
+
+1.Create a project with required entities.
+
+2.Create a module along with respective file name.
+
+3.Run the respective programs for the given boolean equations.
+
+4.Run the module and get the respective RTL outputs.
+
+5.Create university program(VWF) for getting timing diagram.
+
+6.Give the respective inputs for timing diagram and obtain the results.
+
 ## Program:
-/*
+```
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: KANISHKAR M
+RegisterNumber: 22007816 
+
+using NAND:
+
+module combo1(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire p,q,r;
+assign p=(~c & b & a);
+assign q=(~d & c & ~a);
+assign r=(c & ~b & a);
+assign f=(~(~p & ~q & ~r));
+endmodule
+
+using NOR:
+![image](https://user-images.githubusercontent.com/118886772/211155652-0ec701c5-8d47-4cc9-835e-8388c4e99702.png)
+
+
+module combo2(a,b,c,d,f);
+
+input a,b,c,d;
+
+output f;
+
+wire p,q,r;
+
+assign p=( c & ~b & a);
+
+assign q=( d & ~c & a);
+
+assign r=( c & ~b & a);
+
+assign f=((( p | q | r)));
+
+endmodule
 ## RTL realization
 
 ## Output:
 ## RTL
+![image](https://user-images.githubusercontent.com/118886772/211155667-e6698786-24ff-4c2f-b94b-178743ea8e52.png)
+
 ## Timing Diagram
+![image](https://user-images.githubusercontent.com/118886772/211155696-3635fcb5-43ff-44d5-afc5-8ca4d270f9ce.png)
+
+![image](https://user-images.githubusercontent.com/118886772/211155678-d9ab2ffa-10b8-41ab-a2af-59a3a0022a17.png)
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
