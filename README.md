@@ -69,12 +69,11 @@ assign q=( d & ~c & a);
 assign r=( c & ~b & a);
 assign f=((( p | q | r)));
 endmodule
-
-## RTL realization
+```
 
 ## Output:
 
-## RTL
+## RTL realization
 
 using NAND:
 
